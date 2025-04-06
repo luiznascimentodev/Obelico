@@ -810,6 +810,16 @@ blockquote {
   position: relative;
 }
 
+@media screen and (max-width: 991px) {
+  .timeline-section {
+    background-image: url('../images/fundo-jornada-mobile.jpg'); /* Imagem para dispositivos menores */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+}
+
 .timeline-container .vertical-scrollable-timeline {
   list-style-type: none;
   position: relative;
@@ -821,9 +831,17 @@ blockquote {
   height: 87%;
   background-color: var(--primary-color);
   position: absolute;
-  left: 52px;
+  left: 5%;
+  transform: translateX(-50%);
   top: 0;
   overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .timeline-container .vertical-scrollable-timeline .list-progress {
+    width: 6px; /* Adjust width for medium screens */
+    height: 85%; /* Adjust height for medium screens */
+    left: 15%; /* Adjust position for better alignment */
+  }
 }
 
 .timeline-container .vertical-scrollable-timeline .list-progress .inner {
