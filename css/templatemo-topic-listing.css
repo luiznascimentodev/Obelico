@@ -1206,6 +1206,10 @@ blockquote {
     padding-top: 30px;
     padding-bottom: 0;
   }
+
+  p {
+    font-size: 16px; /* Reduz o tamanho do texto das tags <p> */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1227,6 +1231,10 @@ blockquote {
 
   h5 {
     font-size: 20px;
+  }
+
+  p {
+    font-size: 14px; /* Reduz ainda mais o tamanho do texto das tags <p> */
   }
 }
 
