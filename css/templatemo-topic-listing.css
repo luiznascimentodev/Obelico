@@ -232,7 +232,7 @@ strong {
 .custom-border-btn {
   background: transparent;
   border: 2px solid var(--custom-btn-bg-color);
-  color: var(--custom-btn-bg-color);
+  color: var (--custom-btn-bg-color);
 }
 
 .custom-border-btn:hover {
@@ -509,8 +509,8 @@ strong {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  padding-top: 300px;
-  padding-bottom: 270px;
+  padding-top: 250px; /* Ajuste para mover o texto mais para cima */
+  padding-bottom: 300px;
 }
 
 .principal-img {
@@ -1253,4 +1253,41 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
+}
+
+.whatsapp-btn {
+    background-color: #25d366; /* Cor verde do WhatsApp */
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 1; /* Transparência removida */
+    cursor: pointer; /* Exibe a mãozinha ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: #1ebe57; /* Cor mais escura ao passar o mouse */
+}
+
+.whatsapp-btn i {
+    font-size: 24px;
+}
+
+.whatsapp-btn:focus {
+    outline: none;
+}
+
+.whatsapp-btn-container {
+    position: absolute;
+    top: 55%; /* Ajuste para posicionar abaixo da hero-section */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+    text-align: center;
 }
