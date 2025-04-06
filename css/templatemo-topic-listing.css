@@ -503,7 +503,6 @@ strong {
   HERO        
 -----------------------------------------*/
 .hero-section {
-  background-image: linear-gradient(15deg, #252526 0%, #0C0C0D 100%), url('../images/fundo-principal.jpeg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -512,9 +511,26 @@ strong {
   padding-top: 250px; /* Ajuste para mover o texto mais para cima */
   padding-bottom: 300px;
 }
+.principal-img-mobile {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2; /* Adjust transparency */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure it stays behind everything */
+}
+
+@media screen and (orientation: landscape) {
+  .principal-img-mobile {
+    display: none;
+  }
+}
 
 .principal-img {
-  background-image: url('../images/fundo-principal.jpeg');
   background-size: cover;
   background-position: center;
   opacity: 0.3; /* Adjust transparency */
@@ -530,6 +546,7 @@ strong {
 @media screen and (max-width: 991px) {
   .principal-img {
     display: none; /* Hide the image on smaller screens */
+    
   }
 }
 
@@ -566,6 +583,16 @@ strong {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+#caixa-transparente {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    min-height: 350px; /* Garante uma altura mínima */
+    padding: 20px; /* Mantém o espaçamento interno */
+   
+    
+}
 
 /*---------------------------------------
   TOPICS              
@@ -573,7 +600,7 @@ strong {
 .featured-section {
   background-color: var(--secondary-color);
   border-radius: 0 0 100px 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .featured-section .row {
@@ -598,6 +625,7 @@ strong {
 
 .custom-block > a {
   width: 100%;
+  
 }
 
 .custom-block-image {
@@ -614,7 +642,7 @@ strong {
   justify-content: center;
   text-align: center;
   width: 30px;
-  height: 30px;
+  height: 50px;
   line-height: 20px;
 }
 
@@ -622,6 +650,7 @@ strong {
   height: 100%;
   min-height: 350px;
   padding: 0;
+  
 }
 
 .custom-block-overlay > a {
@@ -642,6 +671,7 @@ strong {
   right: 0;
   left: 0;
   padding: 30px;
+  
 }
 
 .social-share {
@@ -1151,7 +1181,7 @@ blockquote {
 
   .featured-section {
     border-radius: 0 0 80px 80px;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
   }
 
   .custom-block-topics-listing .custom-block-image {
@@ -1207,75 +1237,6 @@ section#contact {
   background-repeat: no-repeat;
   background-position: center;
 }
-section#contact .section-heading {
-  color: #fff;
-}
-section#contact form#contactForm .form-group {
-  margin-bottom: 1.5rem;
-}
-section#contact form#contactForm .form-group input,
-section#contact form#contactForm .form-group textarea {
-  padding: 1.25rem;
-}
-section#contact form#contactForm .form-group input.form-control {
-  height: auto;
-}
-section#contact form#contactForm .form-group-textarea {
-  height: 100%;
-}
-section#contact form#contactForm .form-group-textarea textarea {
-  height: 100%;
-  min-height: 10rem;
-}
-section#contact form#contactForm p.help-block {
-  margin: 0;
-}
-section#contact form#contactForm .form-control:focus {
-  border-color: #F29F05;
-  box-shadow: none;
-}
-section#contact form#contactForm ::-webkit-input-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #ced4da;
-}
-section#contact form#contactForm :-moz-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #ced4da;
-}
-section#contact form#contactForm ::-moz-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #ced4da;
-}
-section#contact form#contactForm :-ms-input-placeholder {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  color: #ced4da;
-}
-
-#contact {
-    padding: 50px 0; /* Adicionado padding na seção de contato */
-}
-
-.contact-btn-group {
-    gap: 15px; /* Espaçamento entre os botões */
-}
-
-.whatsapp-btn {
-  background-color: #25d366; /* Cor verde do WhatsApp */
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 15px 30px;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  opacity: 1; /* Transparência removida */
-  cursor: pointer; /* Exibe a mãozinha ao passar o mouse */
-  text-decoration: none; /* Remove sublinhado */
-}
 
 @media screen and (max-width: 992px) {
   .whatsapp-btn {
@@ -1319,10 +1280,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-}
-
-.instagram-btn {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background-color: #6c757d; /* Cor cinza padrão */
   color: white;
   border: none;
   font-size: 18px;
@@ -1330,31 +1288,30 @@ section#contact form#contactForm :-ms-input-placeholder {
   padding: 15px 30px;
   border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   text-decoration: none;
 }
 
-.instagram-btn:hover {
+.contact-btn-group .whatsapp-btn:hover,
+.contact-btn-group .instagram-btn:hover,
+.contact-btn-group .email-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.email-btn {
-  background-color: #6c757d; /* Cor cinza */
-  color: white;
-  border: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 15px 30px;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
+.contact-btn-group .whatsapp-btn {
+  background-color: #25d366; /* Cor do WhatsApp */
 }
 
-.email-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+.contact-btn-group .whatsapp-btn:hover {
+  background-color: #1ebe57; /* Cor mais escura ao passar o mouse */
+}
+
+.contact-btn-group .instagram-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Gradiente do Instagram */
+}
+
+.contact-btn-group .email-btn:hover {
   background-color: #5a6268; /* Cor mais escura ao passar o mouse */
 }
 
@@ -1365,14 +1322,14 @@ section#contact form#contactForm :-ms-input-placeholder {
   justify-content: center; /* Centraliza os botões */
 }
 
-.contact-btn-group .whatsapp-btn,
-.contact-btn-group .instagram-btn,
-.contact-btn-group .email-btn {
-  width: 200px; /* Define uma largura fixa para todos os botões */
-  height: 60px; /* Define uma altura fixa para todos os botões */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 991px) {
+  .contact-btn-group .whatsapp-btn,
+  .contact-btn-group .instagram-btn,
+  .contact-btn-group .email-btn {
+    width: 100%; /* Largura total em telas menores */
+    height: 50px; /* Altura reduzida em telas menores */
+    font-size: 16px; /* Fonte menor em telas menores */
+  }
 }
 
 @media screen and (max-width: 991px) {
