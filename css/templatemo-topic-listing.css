@@ -804,6 +804,9 @@ blockquote {
 -----------------------------------------*/
 .timeline-section {
   background-image: url('../images/Fundo-Jornada.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -813,6 +816,9 @@ blockquote {
 @media screen and (max-width: 991px) {
   .timeline-section {
     background-image: url('../images/fundo-jornada-mobile.jpg'); /* Imagem para dispositivos menores */
+    background-attachment: fixed; /* Faz a imagem se mover com o scroll */
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1260,6 +1266,8 @@ blockquote {
 section#contact {
   background-color: #212529;
   background-image: url("../images/map-image.png");
+  background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
