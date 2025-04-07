@@ -816,13 +816,12 @@ blockquote {
 @media screen and (max-width: 991px) {
   .timeline-section {
     background-image: url('../images/fundo-jornada-mobile.jpg'); /* Imagem para dispositivos menores */
-    background-attachment: fixed; /* Faz a imagem se mover com o scroll */
+    background-attachment: scroll; /* Faz a imagem se mover com o scroll */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+    opacity: 1; /* Garante que a seção esteja visível */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição mais rápida */
   }
 }
 
@@ -1233,6 +1232,12 @@ blockquote {
 
   p {
     font-size: 16px; /* Reduz o tamanho do texto das tags <p> */
+  }
+
+  .timeline-section {
+    opacity: 1 !important; /* Garante que a seção esteja visível */
+    transform: none !important; /* Remove qualquer transformação */
+    transition: none !important; /* Remove transições */
   }
 }
 
