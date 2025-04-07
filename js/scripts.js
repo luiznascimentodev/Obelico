@@ -14,3 +14,4 @@ document.querySelectorAll("[data-animate]").forEach((element) => {
         duration: 1,
     });
 });
+
